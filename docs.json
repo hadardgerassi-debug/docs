@@ -14,17 +14,6 @@
         "tab": "Guides",
         "groups": [
         { "group": "Getting started", "groups": [ { "group": "Quick start", "pages": [ "getting-started/quick-start/index", "getting-started/quick-start/setup", "getting-started/quick-start/first-prompt", "getting-started/quick-start/troubleshooting" ] }, { "group": "Basics", "pages": [ "index", "development" ] } ] },
-
-Then:
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
           {
             "group": "AI tools",
             "pages": [
