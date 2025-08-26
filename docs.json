@@ -13,14 +13,9 @@
       {
         "tab": "Guides",
         "groups": [
-        { "group": "Getting started", "groups": [ { "group": "Quick start", "pages": [ "getting-started/quick-start/index", "getting-started/quick-start/setup", "getting-started/quick-start/first-prompt", "getting-started/quick-start/troubleshooting" ] }, { "group": "Basics", "pages": [ "getting-started/index", "getting-started/development" ] } ] },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
+        { "group": "Getting started", "groups": [ { "group": "Quick start", "pages": [ "getting-started/quick-start/index", "getting-started/quick-start/setup", "getting-started/quick-start/first-prompt", "getting-started/quick-start/troubleshooting" ] }, { "group": "Basics", "pages": [ "index", "development" ] } ] },
+
+Then:
           {
             "group": "Writing content",
             "pages": [
