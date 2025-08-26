@@ -1,41 +1,124 @@
 ---
-title: Welcome
-description: Your knowledge base hub
+title: Help Center
+description: Browse categories and articles
 ---
 
-<div style="max-width: 1040px; margin: 0 auto; padding: 24px 12px;">
-  <h1 style="margin: 0 0 8px;">Welcome</h1>
-  <p style="margin: 0 0 24px; color: #4b5563;">
-    Start with Quick start, then explore essentials, tools, and API reference.
-  </p>
+<style>
+  /* ===== Base44 brand variables (edit these 5) ===== */
+  :root {
+    --b44-primary: #6B4EFF;     /* primary brand */
+    --b44-primary-600: #5A3DF2; /* darker hover */
+    --b44-bg: #0B0B10;          /* page background (set to #FFFFFF for light) */
+    --b44-surface: #11121A;     /* card surface (set to #FFFFFF for light) */
+    --b44-text: #E9EAF3;        /* main text (set to #111827 for light) */
+  }
+  /* Neutrals and supporting tones (tweak if needed) */
+  :root {
+    --b44-muted: #9AA0B4;
+    --b44-border: rgba(233,234,243,0.10);
+    --b44-shadow: 0 1px 0 rgba(0,0,0,0.25), 0 6px 18px rgba(0,0,0,0.25);
+    --b44-shadow-hover: 0 2px 0 rgba(0,0,0,0.3), 0 12px 28px rgba(0,0,0,0.35);
+    --b44-radius: 14px;
+    --b44-icon-bg: linear-gradient(135deg, rgba(107,78,255,0.18), rgba(107,78,255,0.10));
+    --b44-icon-ring: rgba(107,78,255,0.35);
+  }
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;">
-    <a href="/getting-started/index" style="text-decoration: none;">
-      <div style="border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; background: #FFFFFF;">
-        <div style="font-weight: 600; font-size: 18px; margin-bottom: 6px;">Getting started</div>
-        <div style="color: #6B7280;">Quick start and basics</div>
-      </div>
-    </a>
+  /* Page */
+  .b44-wrap { max-width: 1100px; margin: 0 auto; padding: 32px 16px; color: var(--b44-text); }
+  .b44-bg { background: var(--b44-bg); }
+  .b44-muted { color: var(--b44-muted); }
 
-    <a href="/essentials/navigation" style="text-decoration: none;">
-      <div style="border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; background: #FFFFFF;">
-        <div style="font-weight: 600; font-size: 18px; margin-bottom: 6px;">Essentials</div>
-        <div style="color: #6B7280;">Navigation, Markdown, images, code, snippets</div>
-      </div>
-    </a>
+  /* Grid */
+  .b44-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
 
-    <a href="/ai-tools/index" style="text-decoration: none;">
-      <div style="border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; background: #FFFFFF;">
-        <div style="font-weight: 600; font-size: 18px; margin-bottom: 6px;">AI tools</div>
-        <div style="color: #6B7280;">Cursor, Claude Code, Windsurf</div>
-      </div>
-    </a>
+  /* Card */
+  .b44-card {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--b44-surface);
+    border: 1px solid var(--b44-border);
+    border-radius: var(--b44-radius);
+    padding: 16px 18px;
+    text-decoration: none; color: inherit;
+    box-shadow: var(--b44-shadow);
+    transition: transform .08s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .b44-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--b44-shadow-hover);
+    border-color: var(--b44-primary-600);
+  }
 
-    <a href="/api-reference/introduction" style="text-decoration: none;">
-      <div style="border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; background: #FFFFFF;">
-        <div style="font-weight: 600; font-size: 18px; margin-bottom: 6px;">API reference</div>
-        <div style="color: #6B7280;">Overview and OpenAPI</div>
-      </div>
-    </a>
+  /* Icon tile */
+  .b44-icon {
+    width: 56px; height: 56px; border-radius: 12px;
+    background: var(--b44-icon-bg);
+    display: grid; place-items: center; flex: 0 0 auto;
+    border: 1px solid var(--b44-icon-ring);
+  }
+  .b44-icon-badge {
+    display: inline-block;
+    padding: 4px 8px; font-weight: 700; font-size: 12px;
+    color: #0B0B10; background: #C9C3FF; border-radius: 999px;
+  }
+
+  /* Text */
+  .b44-title { font-weight: 700; font-size: 18px; letter-spacing: 0.1px; }
+  .b44-meta { color: var(--b44-muted); font-size: 14px; margin-top: 2px; }
+</style>
+
+<div class="b44-bg">
+  <div class="b44-wrap">
+    <h1 style="margin: 0 0 6px;">Help Center</h1>
+    <p class="b44-muted" style="margin: 0 0 20px;">Pick a category to get started.</p>
+
+    <div class="b44-grid">
+      <!-- Getting Started -->
+      <a class="b44-card" href="/getting-started/index">
+        <div class="b44-icon">
+          <span class="b44-icon-badge">Start</span>
+        </div>
+        <div>
+          <div class="b44-title">Getting Started</div>
+          <div class="b44-meta">6 articles</div>
+        </div>
+      </a>
+
+      <!-- Essentials -->
+      <a class="b44-card" href="/essentials/navigation">
+        <div class="b44-icon">
+          <span style="font-size: 22px;">📚</span>
+        </div>
+        <div>
+          <div class="b44-title">Essentials</div>
+          <div class="b44-meta">6 articles • Markdown, images, code</div>
+        </div>
+      </a>
+
+      <!-- AI tools -->
+      <a class="b44-card" href="/ai-tools/index">
+        <div class="b44-icon">
+          <span style="font-size: 22px;">🤖</span>
+        </div>
+        <div>
+          <div class="b44-title">AI Tools</div>
+          <div class="b44-meta">3 articles • Cursor, Claude Code, Windsurf</div>
+        </div>
+      </a>
+
+      <!-- API Reference -->
+      <a class="b44-card" href="/api-reference/introduction">
+        <div class="b44-icon">
+          <span style="font-size: 22px;">🧩</span>
+        </div>
+        <div>
+          <div class="b44-title">API Reference</div>
+          <div class="b44-meta">2 articles • Overview + OpenAPI</div>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
