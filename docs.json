@@ -11,19 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
-        "groups": [
-        { "group": "Getting started", "groups": [ { "group": "Quick start", "pages": [ "getting-started/quick-start/index", "getting-started/quick-start/setup", "getting-started/quick-start/first-prompt", "getting-started/quick-start/troubleshooting" ] }, { "group": "Basics", "pages": [ "index", "development" ] } ] },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
+ "tab": "Guides", "groups": [ { "group": "Getting started", "groups": [ { "group": "Quick start", "pages": [ "getting-started/quick-start/index", "getting-started/quick-start/setup", "getting-started/quick-start/first-prompt", "getting-started/quick-start/troubleshooting" ] }, { "group": "Basics", "pages": [ "index", "development" ] } ] }, { "group": "AI tools", "pages": [ "ai-tools/cursor", "ai-tools/claude-code", "ai-tools/windsurf" ] } ] },
       {
         "tab": "API reference",
         "groups": [
